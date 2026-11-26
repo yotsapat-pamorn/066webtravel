@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -8,15 +7,15 @@ body {
     margin: 0;
     font-family: system-ui, sans-serif;
     line-height: 1.65;
-    color: #212121;
-    background: #FFFFFF;
+    color: #283D4D;		 /*สีตัวอักษรที่แสดงผลในส่วนของเนื้อหาเว็บ*/
+    background: #FFF8F0;	/*สีพื้นหลังของตัวเว็บ*/
 }
 
 /* ส่วนหัวและส่วนท้ายเว็บไซต์ */
 header, footer {
     padding: 1rem;
     color: #FFFFFF;
-    background: #197218;
+    background: #283D4D;	/*สีพื้นหลังของส่วนหัวเว็บและท้ายเว็บ*/
 }
 
 /* ชื่อเว็บไซต์ */
@@ -39,7 +38,7 @@ nav ul {
 nav a {
     display: block;
     padding: 0.35rem 0.75rem;
-    color: #FFFFFF;
+    color: #FFFFFF;	/*สีตัวอักษรบนเมนู*/
     border-radius: 0.35rem;
     text-decoration: none;
 }
@@ -47,12 +46,12 @@ nav a {
 /* สีเมื่อนำเมาส์ไปชี้เมนู */
 nav a:hover,
 nav a[aria-current="page"] {
-    background: #F8E8D3;
-    color: #174C3C;
+    background: #F4C095;	/*พื้นหลังของเมนูเมื่อเอาเมาส์ไปวางชี้*/
+    color: #283D4D;
 }
 
 a:focus-visible {
-    outline: 3px solid #C67400;
+    outline: 3px solid #B85C38;
     outline-offset: 3px;
 }
 
@@ -62,10 +61,20 @@ main {
     margin: 2rem auto;
 }
 
+/* สีหัวข้อเนื้อหา */
+main h1, main h2, main h3 {
+    color: #283D4D;
+}
+
+/* ลิงก์ภายในเนื้อหา */
+main a:not(.button) {
+    color: #A64F30;
+}
+
 /* หัวข้อสไลด์ */
 .slider-title {
     text-align: center;
-    color: #174C3C;
+    color: #283D4D;
     font-size: 22px;
     margin-bottom: 15px;
 }
@@ -110,7 +119,7 @@ main {
 .dot {
     width: 8px;
     height: 8px;
-    background: #CCCCCC;
+    background: #D8C8BB;
     border-radius: 10px;
     transition: 0.3s;
 }
@@ -118,16 +127,16 @@ main {
 /* จุดของรูปที่กำลังแสดง */
 .dot.active {
     width: 24px;
-    background: #174C3C;
+    background: #B85C38;
 }
 
 /* การ์ดเนื้อหา */
 .card {
     margin: 1rem 0;
     padding: 1rem;
-    border: 1px solid #D1E2D7;
+    border: 1px solid #EAD9CB;
     border-radius: 0.75rem;
-    background: #FFF3D7;
+    background: #FFFFFF;	/*สีพื้นหลังของกรอบcard*/
 }
 
 /* รูปภาพทั่วไป */
@@ -143,14 +152,15 @@ img {
     display: inline-block;
     padding: 0.6rem 1rem;
     border-radius: 0.35rem;
-    background: #197218;
+    background: #B85C38;	 /*สีของปุ่ม*/
     color: #FFFFFF;
     text-decoration: none;
 }
 
 /* สีเมื่อนำเมาส์ไปชี้ปุ่ม */
 .button:hover {
-    background: #174C3C;
+    background: #283D4D;
+    color: #FFFFFF;
 }
 
 /* รองรับหน้าจอโทรศัพท์มือถือ */
@@ -200,7 +210,7 @@ main ul ul {
     margin: 40px auto;
     padding: 30px;
     background: #FFFFFF;
-    border: 1px solid #D1E2D7;
+    border: 1px solid #EAD9CB;
     border-radius: 15px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
@@ -208,7 +218,7 @@ main ul ul {
 /* หัวข้อเข้าสู่ระบบ */
 .login-card h1 {
     text-align: center;
-    color: #174C3C;
+    color: #283D4D;
     font-size: 28px;
     margin: 0 0 15px;
 }
@@ -216,7 +226,7 @@ main ul ul {
 /* ข้อความต้อนรับ */
 .login-subtitle {
     text-align: center;
-    color: #777777;
+    color: #6B625C;
     font-size: 14px;
     margin-bottom: 25px;
 }
@@ -231,7 +241,7 @@ main ul ul {
     display: block;
     font-weight: bold;
     margin-bottom: 6px;
-    color: #212121;
+    color: #283D4D;
 }
 
 /* ช่องกรอกข้อมูลและตัวเลือก */
@@ -239,7 +249,7 @@ main ul ul {
 .login-card select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #D8C8BB;
     border-radius: 6px;
     font-family: inherit;
     font-size: 14px;
@@ -250,8 +260,8 @@ main ul ul {
 .login-card input:focus,
 .login-card select:focus {
     outline: none;
-    border-color: #197218;
-    box-shadow: 0 0 0 3px rgba(25, 114, 24, 0.12);
+    border-color: #B85C38;
+    box-shadow: 0 0 0 3px rgba(184, 92, 56, 0.12);
 }
 
 /* จัดช่องรหัสผ่านและปุ่มแสดง */
@@ -269,7 +279,7 @@ main ul ul {
 /* ปุ่มแสดงรหัสผ่าน */
 #togglePassword {
     padding: 10px 15px;
-    background: #197218;
+    background: #B85C38;
     color: #FFFFFF;
     border: none;
     border-radius: 6px;
@@ -281,7 +291,7 @@ main ul ul {
 .login-button {
     width: 100%;
     padding: 13px;
-    background: #197218;
+    background: #B85C38;
     color: #FFFFFF;
     border: none;
     border-radius: 6px;
@@ -294,7 +304,7 @@ main ul ul {
 /* สีเมื่อเอาเมาส์ไปชี้ */
 .login-button:hover,
 #togglePassword:hover {
-    background: #174C3C;
+    background: #283D4D;
 }
 
 /* ข้อความแจ้งเตือน */
@@ -308,10 +318,10 @@ main ul ul {
 .demo-account {
     margin-top: 20px;
     padding: 15px;
-    background: #F0F5F1;
+    background: #FFF8F0;
     border-radius: 8px;
     font-size: 13px;
-    color: #174C3C;
+    color: #283D4D;
 }
 
 .demo-account p {
