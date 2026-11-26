@@ -1,0 +1,333 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/* พื้นฐานเว็บไซต์ */
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.65;
+    color: #212121;
+    background: #FFFFFF;
+}
+
+/* ส่วนหัวและส่วนท้ายเว็บไซต์ */
+header, footer {
+    padding: 1rem;
+    color: #FFFFFF;
+    background: #197218;
+}
+
+/* ชื่อเว็บไซต์ */
+.site-name {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* เมนูเว็บไซต์ */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.35rem 0.75rem;
+    color: #FFFFFF;
+    border-radius: 0.35rem;
+    text-decoration: none;
+}
+
+/* สีเมื่อนำเมาส์ไปชี้เมนู */
+nav a:hover,
+nav a[aria-current="page"] {
+    background: #F8E8D3;
+    color: #174C3C;
+}
+
+a:focus-visible {
+    outline: 3px solid #C67400;
+    outline-offset: 3px;
+}
+
+/* ส่วนเนื้อหาเว็บไซต์ */
+main {
+    width: min(92%, 56rem);
+    margin: 2rem auto;
+}
+
+/* หัวข้อสไลด์ */
+.slider-title {
+    text-align: center;
+    color: #174C3C;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* กรอบสไลด์รูปภาพ */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 15px auto 10px;
+}
+
+/* ควบคุมการเลื่อนรูปภาพ */
+.slide-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* ขนาดรูปภาพในสไลด์ */
+.slide-track img {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    height: 350px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* จัดตำแหน่งจุดใต้สไลด์ */
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* จุดแสดงตำแหน่งปกติ */
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #CCCCCC;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* จุดของรูปที่กำลังแสดง */
+.dot.active {
+    width: 24px;
+    background: #174C3C;
+}
+
+/* การ์ดเนื้อหา */
+.card {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #D1E2D7;
+    border-radius: 0.75rem;
+    background: #FFF3D7;
+}
+
+/* รูปภาพทั่วไป */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* ปุ่มกด */
+.button {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 0.35rem;
+    background: #197218;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* สีเมื่อนำเมาส์ไปชี้ปุ่ม */
+.button:hover {
+    background: #174C3C;
+}
+
+/* รองรับหน้าจอโทรศัพท์มือถือ */
+@media (max-width: 600px) {
+
+    .slide-track img {
+        height: 200px;
+    }
+
+    .slider-title {
+        font-size: 18px;
+    }
+}
+
+/* รองรับผู้ที่ตั้งค่าลดการเคลื่อนไหว */
+@media (prefers-reduced-motion: reduce) {
+    .slide-track,
+    .dot {
+        transition: none;
+    }
+}
+/* จุดหลักแบบวงกลมทึบ */
+main ul {
+    list-style-type: disc;
+}
+
+/* จุดย่อยแบบวงกลมโปร่ง */
+main ul ul {
+    list-style-type: circle;
+    padding-left: 30px;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   หน้าเข้าสู่ระบบ
+========================= */
+
+/* กรอบเข้าสู่ระบบ */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D1E2D7;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* หัวข้อเข้าสู่ระบบ */
+.login-card h1 {
+    text-align: center;
+    color: #174C3C;
+    font-size: 28px;
+    margin: 0 0 15px;
+}
+
+/* ข้อความต้อนรับ */
+.login-subtitle {
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* จัดระยะห่างของช่องกรอก */
+.login-card .form-group {
+    margin-bottom: 18px;
+}
+
+/* หัวข้อช่องกรอกข้อมูล */
+.login-card label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #212121;
+}
+
+/* ช่องกรอกข้อมูลและตัวเลือก */
+.login-card input,
+.login-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #FFFFFF;
+}
+
+/* เมื่อกดช่องกรอกข้อมูล */
+.login-card input:focus,
+.login-card select:focus {
+    outline: none;
+    border-color: #197218;
+    box-shadow: 0 0 0 3px rgba(25, 114, 24, 0.12);
+}
+
+/* จัดช่องรหัสผ่านและปุ่มแสดง */
+.password-box {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.password-box input {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ปุ่มแสดงรหัสผ่าน */
+#togglePassword {
+    padding: 10px 15px;
+    background: #197218;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ปุ่มเข้าสู่ระบบ */
+.login-button {
+    width: 100%;
+    padding: 13px;
+    background: #197218;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* สีเมื่อเอาเมาส์ไปชี้ */
+.login-button:hover,
+#togglePassword:hover {
+    background: #174C3C;
+}
+
+/* ข้อความแจ้งเตือน */
+#loginMessage {
+    font-size: 13px;
+    min-height: 20px;
+    text-align: center;
+}
+
+/* กล่องบัญชีทดลอง */
+.demo-account {
+    margin-top: 20px;
+    padding: 15px;
+    background: #F0F5F1;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #174C3C;
+}
+
+.demo-account p {
+    margin: 5px 0;
+}
+
+/* รองรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+    .login-card {
+        padding: 20px;
+        margin: 20px auto;
+    }
+}
+
+/* ซ่อนไอคอนรูปดวงตาของเบราว์เซอร์ Edge */
+#password::-ms-reveal {
+    display: none;
+}
+
